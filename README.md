@@ -23,15 +23,6 @@ yarn
 
 # 启动mongoDB数据库
 
-# 获取镜像ID：
-docker images  
-
-# 运行镜像：
-docker run -p 27017:27017 -td [imagesID]
-
-#查看是运行成功： 
-docker ps
-
 # 添加管理员账号： 
 打开robo 3t
 
@@ -43,7 +34,7 @@ docker ps
 }
 
 # 启动项目
-yarn dev
+npm run dev
 ```
 
 # 项目截图
