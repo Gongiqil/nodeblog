@@ -8,7 +8,7 @@ function blogAjax(url, data, fn) {
     data: data,
     dataType: "JSON",
     error: function(data) {
-      alert('加载异常，请稍后重试')
+      console.log('加载异常，请稍后重试')
     },
     success: function(res) {
      typeof fn === 'function' && fn(res)
@@ -89,7 +89,7 @@ $('.add-category').on('click', function () {
       dataType: "JSON",
       async:true,
       error: function(data) {
-        alert('加载异常，请稍后重试')
+        console.log('加载异常，请稍后重试')
       },
       success: function(res) {
         console.log(res)
