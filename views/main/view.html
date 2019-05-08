@@ -10,6 +10,7 @@
       评论：{{content.comments.length}}
     </p>
     <p class="intro">{{content.description}}</p>
+    <p style="white-space: pre-line;" class="intro">{{content.content}}</p>
   </div>
   <div class="comment-box">
   	<p class="title">
@@ -25,7 +26,10 @@
   	</div>
   	{% else %}
     	<div class="no-login">你还没有登录，请先登录</div>
-  	{% endif %}
+    {% endif %}
+  
+    {% if userInfo._id %}
+
   	{% if content.comments.length %}
       <div class="comment-list">
       	<div class="comment-item">
@@ -46,6 +50,11 @@
           <a href="">下一页 </a>
       </li>
     </ul>
+    {% else %}
+    <div style="height:50px">
+      
+    </div>
+  	{% endif %}
   </div>
 </div>
 <script src="/public/js/comment.js"></script>
